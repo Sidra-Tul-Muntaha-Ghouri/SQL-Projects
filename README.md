@@ -4,7 +4,7 @@
 - [Overview](#overview)
 - [About the Dataset](#about_the_dataset)
 - [ER-Diagram of the Data](#ER-Diagram-of-the-Data)
-- [Part 1: Dataset Profiling and Understanding](#Part-1-:-Dataset-Profiling-and-Understanding)
+- [Part 1: Dataset Profiling and Understanding](#Part-1:-Dataset-Profiling-and-Understanding)
 ## Overview
 This Project is an assignment from [SQL For Data Science](https://coursera.org/share/af562401cc2e1311f74e6ef3acec7fb2) This project utilized the knowledge of a wide range of concepts and SQL design techniques discussed throughout the course. 
 
