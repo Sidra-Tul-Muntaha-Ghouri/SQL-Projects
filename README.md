@@ -23,11 +23,55 @@ In this section, a series of questions were posed with the primary goal of unrav
 ### Questions:
 Following questions were addressed in this section:
 1. Profile the data by finding the total number of records for each of the tables.
+   
+   i. Attribute table = 10000
+   
+  ii. Business table = 10000
+  
+  iii. Category table = 10000
+  
+  iv. Checkin table = 10000
+  
+  v. elite_years table = 10000
+  
+  vi. friend table = 10000
+  
+  vii. hours table =10000
+  
+  viii. photo table =10000 
+  
+  ix. review table = 10000
+  
+  x. tip table = 10000
+  
+  xi. user table = 10000
+
+**CODE** to solve this:
+```SQL
+SELECT COUNT(*) FROM _Relevant_Table
+```
+
 2. Find the total distinct records by either the foreign key or primary key for each table. If two foreign keys are listed in the table, please specify which foreign key.
-3. Are there any columns with null values in the Users table? Indicate "yes," or "no."
-4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:
-5. List the cities with the most reviews in descending order.
-6. Find the distribution of star ratings to the business in the following cities.
+   
+  i. Business = 10000 (id)\
+  ii. Hours = 1562 (business_id)\
+  iii. Category = 2643 (business_id)\
+  iv. Attribute = 1115 (business_id)\
+  v. Review = 8090 (business_id)\
+  vi. Checkin = 493 (business_id)\
+  vii. Photo = 6493 (business_id)\
+  viii. Tip = 3979 (business_id)\
+  ix. User = 10000 (id)\
+  x. Friend = 11 (user_id)\
+  xi. Elite_years = 2780 (user_id)\
+
+
+4. 
+5. 
+6. Are there any columns with null values in the Users table? Indicate "yes," or "no."
+7. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields:
+8. List the cities with the most reviews in descending order.
+9. Find the distribution of star ratings to the business in the following cities.
 
 
 ## Part 2: Inferences and Analysis
