@@ -1,18 +1,12 @@
 # Yelp Data Analysis
 
-## Table of Content
-- [Overview](#overview)
-- [About the Dataset](#about_the_dataset)
-- [ER-Diagram of the Data](#ER-Diagram-of-the-Data)
-- [Part 1: Dataset Profiling and Understanding](#Part-1:-Dataset-Profiling-and-Understanding)
-  - [Questions](#questions)
-# Table of Contents
+## Table of Contents
 
 1. [Overview](#overview)
 2. [About the Dataset](#about-the-dataset)
 3. [ER-Diagram of the Data](#er-diagram-of-the-data)
 4. [Part 1: Dataset Profiling and Understanding](#part-1-dataset-profiling-and-understanding)
-   1. [Profile the data by finding the total number of records for each of the tables](#1-profile-the-data-by-finding-the-total-number-of-records-for-each-of-the-tables)
+   1. [Profile the data by finding the total number of records for each of the tables](#profile-the-data-by-finding-the-total-number-of-records-for-each-of-the-tables)
    2. [Find the total distinct records by either the foreign key or primary key for each table](#question-2-find-the-total-distinct-records-by-either-the-foreign-key-or-primary-key-for-each-table)
    3. [Are there any columns with null values in the Users table? Indicate "yes," or "no."](#question-3-are-there-any-columns-with-null-values-in-the-users-table-indicate-yes-or-no)
    4. [For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields](#question-4-for-each-table-and-column-listed-below-display-the-smallest-minimum-largest-maximum-and-average-mean-value-for-the-following-fields)
