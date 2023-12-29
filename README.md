@@ -476,10 +476,10 @@ ii. Write 1-2 brief paragraphs on the type of data you will need for your analys
 I'll need star ratings, review counts, and the names of the businesses. I chose this because I want to know which categories of businesses are more popular globally.
 Within the categories, I compute the mean star rating, total reviews and total number of businesses for each category. To ensure statistical validity, I only focus on 25 categories with most businesses. 
 
-The results reveal that;
-	1.Restaurants have an average star rating of 3.45, with a substantial total of 3,772 reviews spread across 53 businesses.
-	2.Shopping businesses exhibit a higher average star rating of 4.0, based on 945 reviews from 25 businesses.
-	3.The Food category receives an average star rating of 3.73, derived from 1,588 reviews spanning 20 businesses.
+## 5. Key Findings 
+	1.Restaurants have an average star rating of 3.45, with a substantial total of 3,772 reviews spread across 53 businesses.\
+	2.Shopping businesses exhibit a higher average star rating of 4.0, based on 945 reviews from 25 businesses.\
+	3.The Food category receives an average star rating of 3.73, derived from 1,588 reviews spanning 20 businesses.\
 	4.Health & Medical services showcase positive feedback, with an average star rating of 4.22 from 198 reviews across 16 businesses.
 	5.Home Services have an average star rating of 3.93, derived from 91 reviews across 15 businesses.
 	6.Beauty & Spas receive an average star rating of 3.79 based on 116 reviews from 12 businesses.
