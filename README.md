@@ -21,11 +21,12 @@
   
 ## Workflow
 
-The project is comprises of two parts:
-1. Data profiling & Understanding
-2. Inferences and Analysis.
-In the first part, I extracted the General characteristics of the data,  For instance; total number of records in each table, the null and the distinct values in the table and the minimum, maximum & average values in the table. 
-Along with this I have also presented a low level overview of the database like the cities with the most reviews and the businesses with high star rating etcetera.
+The project is comprised of two parts:
+  1. Data profiling & Understanding
+  2. Inferences and Analysis.
+
+In the first part, I extracted the General characteristics of the data,  For instance; the total number of records in each table, the null and the distinct values in the table, and the minimum, maximum & average values in the table. 
+Along with this, I have also presented a low-level overview of the database like the cities with the most reviews and the businesses with high star ratings etcetera.
 In the second part, 
 
 
@@ -33,7 +34,7 @@ In the second part,
   
  In this section, a series of questions were posed with the primary goal of unraveling the composition and scale of the data, shedding light on its fundamental characteristics. 
  ### Questions: 
- Following questions are addressed in this section: 
+ The following questions are addressed in this section: 
   
  1. Profile the data by finding the total number of records for each of the tables. 
   
@@ -74,7 +75,7 @@ In the second part,
  SELECT Count(DISTINCT( KEY )) 
  FROM   _relevant_table  
  ``` 
- Note: Primary Keys are denoted in the ER-Diagram with a yellow key icon. 
+ Note: Primary Keys are denoted in the ER Diagram with a yellow key icon. 
   
  3. Are there any columns with null values in the Users table? Indicate "yes," or "no." 
   
