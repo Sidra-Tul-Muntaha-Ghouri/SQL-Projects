@@ -25,9 +25,9 @@ The project is comprised of two parts:
   1. Data profiling & Understanding
   2. Inferences and Analysis.
 
-In the first part, I extracted the General characteristics of the data,  For instance; the total number of records in each table, the null and the distinct values in the table, and the minimum, maximum & average values in the table. 
-Along with this, I have also presented a low-level overview of the database like the cities with the most reviews and the businesses with high star ratings etcetera.
-In the second part, 
+In the first part, I  profiled the data and presented a low-level overview of the data For instance; the total number of records in each table, the null and the distinct values in the table, and the minimum, maximum & average values in the table. Also, the cities with the most reviews and the businesses with high star ratings etcetera.
+
+In the second part, I did a comparative analysis of the businesses with 2-3 star rating to the businesses
 
 
  ## Part 1: Dataset Profiling and Understanding 
