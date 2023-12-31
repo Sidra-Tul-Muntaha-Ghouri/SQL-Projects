@@ -8,7 +8,7 @@
 4. [Workflow](#workflow)
 5. [Part 1: Dataset Profiling and Understanding](#part-1-dataset-profiling-and-understanding)
    - [Questions](#questions)
-   - [1. Profile the data by finding the total number of records for each of the tables](#1-profile-the-data-by-finding-the-total-number-of-records-for-each-of-the-tables)
+   - [1. Profile the data by finding the total number of records for each of the tables](#1.-profile-the-data-by-finding-the-total-number-of-records-for-each-of-the-tables)
    - [2. Find the total distinct records by either the foreign key or primary key for each table](#2-find-the-total-distinct-records-by-either-the-foreign-key-or-primary-key-for-each-table)
    - [3. Are there any columns with null values in the Users table?](#3-are-there-any-columns-with-null-values-in-the-users-table)
    - [4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields](#4-for-each-table-and-column-listed-below-display-the-smallest-minimum-largest-maximum-and-average-mean-value-for-the-following-fields)
