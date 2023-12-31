@@ -2,11 +2,33 @@
   
  ## Table of Contents 
   
- 1. [Overview](#overview) 
- 2. [About the Dataset](#about-the-dataset) 
- 3. [ER-Diagram of the Data](#er-diagram-of-the-data) 
- 4. [Part 1: Dataset Profiling and Understanding](#part-1-dataset-profiling-and-understanding) 
- 5. [Part 2: Inferences and Analysis](#part-2-inferences-and-analysis) 
+# Yelp Data Analysis
+
+## Table of Contents
+
+1. [Overview](#overview)
+2. [About the Dataset](#about-the-dataset)
+3. [ER-Diagram of the Data](#er-diagram-of-the-data)
+4. [Workflow](#workflow)
+5. [Part 1: Dataset Profiling and Understanding](#part-1-dataset-profiling-and-understanding)
+   - [Questions](#questions)
+   - [1. Profile the data by finding the total number of records for each of the tables](#1-profile-the-data-by-finding-the-total-number-of-records-for-each-of-the-tables)
+   - [2. Find the total distinct records by either the foreign key or primary key for each table](#2-find-the-total-distinct-records-by-either-the-foreign-key-or-primary-key-for-each-table)
+   - [3. Are there any columns with null values in the Users table?](#3-are-there-any-columns-with-null-values-in-the-users-table)
+   - [4. For each table and column listed below, display the smallest (minimum), largest (maximum), and average (mean) value for the following fields](#4-for-each-table-and-column-listed-below-display-the-smallest-minimum-largest-maximum-and-average-mean-value-for-the-following-fields)
+   - [5. List the cities with the most reviews in descending order](#5-list-the-cities-with-the-most-reviews-in-descending-order)
+   - [6. Find the distribution of star ratings to the business in the following cities](#6-find-the-distribution-of-star-ratings-to-the-business-in-the-following-cities)
+   - [7. Find the top 3 users based on their total number of reviews](#7-find-the-top-3-users-based-on-their-total-number-of-reviews)
+   - [8. Does posing more reviews correlate with more fans?](#8-does-posing-more-reviews-correlate-with-more-fans)
+   - [9. Are there more reviews with the word "love" or with the word "hate" in them?](#9-are-there-more-reviews-with-the-word-love-or-with-the-word-hate-in-them)
+   - [10. Find the distribution of star ratings to the business in the following cities](#10-find-the-distribution-of-star-ratings-to-the-business-in-the-following-cities)
+
+6. [Part 2: Inferences and Analysis](#part-2-inferences-and-analysis)
+   - [1. Pick one city and category and group the businesses in that city or category by their overall star rating](#1-pick-one-city-and-category-and-group-the-businesses-in-that-city-or-category-by-their-overall-star-rating)
+   - [2. Group business based on the ones that are open and the ones that are closed](#2-group-business-based-on-the-ones-that-are-open-and-the-ones-that-are-closed)
+   - [3. For this last part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare the data for analysis](#3-for-this-last-part-of-your-analysis-you-are-going-to-choose-the-type-of-analysis-you-want-to-conduct-on-the-yelp-dataset-and-are-going-to-prepare-the-data-for-analysis)
+
+ 
   
  ## Overview 
  This Project is an assignment from [SQL For Data Science](https://coursera.org/share/af562401cc2e1311f74e6ef3acec7fb2). This project utilized the knowledge of a wide range of concepts and SQL design techniques discussed throughout the course.  
@@ -33,14 +55,13 @@ The project is comprised of two parts:
 
 In the first part, I  profiled the data and presented a low-level overview of the data For instance; the total number of records in each table, the null and the distinct values in the table, and the minimum, maximum & average values in the table. Also, the cities with the most reviews and the businesses with high star ratings etcetera.
 
-In the second part, I did a comparative analysis of the businesses with 2-3 star ratings to the businesses with 4-5 stars. I also infered the similiarities between the business that are open with the closed ones. I then analyzed to ascertain the most popular business category.
+In the second part, I did a comparative analysis of the businesses with 2-3 star ratings to the businesses with 4-5 stars. I also inferred the similarities between the businesses that are open with the closed ones. I then analyzed it to ascertain the most popular business category.
 
 
  ## Part 1: Dataset Profiling and Understanding 
   
- In this section, a series of questions were posed with the primary goal of unraveling the composition and scale of the data, shedding light on its fundamental characteristics. 
+ In this section, a series of questions are posed with the primary goal of unraveling the composition and scale of the data, shedding light on its fundamental characteristics. 
  ### Questions: 
- The following questions are addressed in this section: 
   
  1. Profile the data by finding the total number of records for each of the tables. 
   
@@ -86,7 +107,7 @@ In the second part, I did a comparative analysis of the businesses with 2-3 star
   
  3. Are there any columns with null values in the Users table? Indicate "yes," or "no." 
   
- Answer: NO 
+ Answer: NO
   
  **CODE**: 
  ```SQL 
@@ -153,7 +174,16 @@ In the second part, I did a comparative analysis of the businesses with 2-3 star
  FROM   _relevant_table  
  ``` 
   
- 5. List the cities with the most reviews in descending order. 
+ 5. List the cities with the most reviews in descending order.
+
+     **CODE**: 
+ ```SQL 
+ SELECT   city, 
+          Sum(review_count) AS total reviews 
+ FROM     business 
+ GROUP BY city 
+ ORDER BY review_count DESC 
+ ``` 
   
  | city            | total_reviews | 
  |-----------------|---------------| 
@@ -185,14 +215,7 @@ In the second part, I did a comparative analysis of the businesses with 2-3 star
   
  (Output limit exceeded, 25 of 362 total rows shown)"  
   
- **CODE**: 
- ```SQL 
- SELECT   city, 
-          Sum(review_count) AS total reviews 
- FROM     business 
- GROUP BY city 
- ORDER BY review_count DESC 
- ``` 
+
  6. Find the distribution of star ratings to the business in the following cities: 
   
          i. Avon 
@@ -259,7 +282,6 @@ In the second part, I did a comparative analysis of the businesses with 2-3 star
  | Gerald    |         2000 | 
  | Sara      |         1629 | 
  | Yuri      |         1339 | 
-  
   
   
  8. Does posing more reviews correlate with more fans? 
@@ -472,9 +494,9 @@ Phoenix Restaurants have a total review count of 532.0, while Toronto Restaurant
 3. The operating hours differ between open and closed establishments.
 4. Additionally, there's a variety of postal codes for both open and closed restaurants.
   
- 3. For this last part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare the data for analysis. 
+ 3. For this part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare the data for analysis. 
 
-In this section, I analyzed to ascertain the most popular business category.
+In this section, I analyzed the data to ascertain the most popular business category.
   
 I used star ratings, review counts, and the names of the businesses. This decision was made to discern the global popularity of various business categories. Within each category, I calculated the mean star rating, total reviews, and the overall number of businesses.
 To ensure statistical validity, I only focused on 25 categories with most businesses.  
