@@ -350,9 +350,10 @@ SELECT reviews,
  ## Part 2: Inferences and Analysis 
   
  1. Pick one city and category and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars and answer the following questions.
-     **CODE**: 
+
+### CODE:
+
  ```SQL 
-  
  SELECT b.NAME, 
         b.city, 
         c.category, 
@@ -374,7 +375,7 @@ SELECT reviews,
  GROUP  BY NAME 
  ORDER  BY star_rating DESC  
  ``` 
- **OUTPUT** 
+ **OUTPUT DATASET** 
  | name                                   | city    | category    | hours                | Avg(b.review_count) | postal_code | star_rating     | 
  |----------------------------------------|---------|-------------|----------------------|---------------------|-------------|-----------------| 
  | Bootleggers Modern American Smokehouse | Phoenix | Restaurants | Saturday|11:00-22:00 | 431.0               | 85028       | 4-5 stars       | 
@@ -392,11 +393,11 @@ SELECT reviews,
   
  > i. Do the two groups you chose to analyze have a different distribution of hours? 
   
-   I analyzed the data of Toronto Restaurants & Phoenix Restaurants. The distribution of hours was just a little bit different. The restaurants having 4-5 stars rating seems to have less hours where as the restaurants with 2-3 stars rating have more hours._
+   I analyzed the data of Toronto Restaurants & Phoenix Restaurants. The distribution of hours was just a little bit different. The restaurants having 4-5 star ratings seem to have fewer hours where whereas the restaurants with 2-3 star ratings have more hours._
   
  > ii. Do the two groups you chose to analyze have a different number of reviews? 
   
-   The two groups i cochose for analysis are restaurants in Phoenix and Toronto.
+   The two groups i chose for analysis are restaurants in Phoenix and Toronto.
 - Phoenix Restaurants:
   - Bootleggers Modern American Smokehouse: 431.0 reviews
   - Cabin Fever: 26.0 reviews
@@ -406,13 +407,13 @@ SELECT reviews,
   - Total reviews for Phoenix Restaurants: 431.0+26.0+7.0+60.0+8.0=532.0
 
 - Toronto Restaurants:
- - Cabin Fever: 26.0 reviews
- - Edulis: 89.0 reviews
- - Sushi Osaka: 8.0 reviews
- - 99 Cent Sushi: 5.0 reviews
- - Big Smoke Burger: 47.0 reviews
- - Pizzaiolo: 34.0 reviews
- - Total reviews for Toronto Restaurants: 26.0+89.0+8.0+5.0+47.0+34.0=209.0
+  - Cabin Fever: 26.0 reviews
+  - Edulis: 89.0 reviews
+  - Sushi Osaka: 8.0 reviews
+  - 99 Cent Sushi: 5.0 reviews
+  - Big Smoke Burger: 47.0 reviews
+  - Pizzaiolo: 34.0 reviews
+  - Total reviews for Toronto Restaurants: 26.0+89.0+8.0+5.0+47.0+34.0=209.0
 
 ### Conclusion:
 Phoenix Restaurants have a total review count of 532.0, while Toronto Restaurants have a total review count of 209.0.
