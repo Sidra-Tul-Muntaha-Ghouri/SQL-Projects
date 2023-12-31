@@ -1,10 +1,6 @@
 # Yelp Data Analysis 
   
  ## Table of Contents 
-  
-# Yelp Data Analysis
-
-## Table of Contents
 
 1. [Overview](#overview)
 2. [About the Dataset](#about-the-dataset)
