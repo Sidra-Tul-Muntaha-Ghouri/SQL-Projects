@@ -351,7 +351,7 @@ SELECT reviews,
   
  ## Part 2: Inferences and Analysis 
   
-** 1. Pick one city and category and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars and answer the following questions.**
+###** 1. Pick one city and category and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars and answer the following questions.**
 ### Analysis Details:
 City: Phoenix
 Category: Restaurants
@@ -430,7 +430,7 @@ Phoenix Restaurants have a total review count of 532.0, while Toronto Restaurant
 - Toronto Restaurants have postal codes like M6P 1A6, M5V, M9A 1C2, M5B 2E5, M4B 2L9, and M5H 1X6.
 - There is a clear distinction in postal codes between the two groups, indicating they are in different geographical locations.
                  
- 2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones that are still open and the ones that are closed?
+### 2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones that are still open and the ones that are closed?
 
  **CODE**: 
  ```SQL 
@@ -479,7 +479,7 @@ Phoenix Restaurants have a total review count of 532.0, while Toronto Restaurant
 3. The operating hours differ between open and closed establishments.
 4. Additionally, there's a variety of postal codes for both open and closed restaurants.
   
- 3. For this part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare the data for analysis. 
+### 3. For this part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare the data for analysis. 
 
 In this section, I analyzed the data to ascertain the most popular business category.
   
