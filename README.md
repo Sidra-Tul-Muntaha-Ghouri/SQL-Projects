@@ -349,20 +349,7 @@ SELECT reviews,
  ## Part 2: Inferences and Analysis 
   
  1. Pick one city and category and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars and answer the following questions.
-  
- > i. Do the two groups you chose to analyze have a different distribution of hours? 
-  
-   _I analyzed the data of Toronto Restaurants & Phoenix Restaurants. The distribution of hours was just a little bit different. The restaurants having 4-5 stars rating seems to have less hours where as the restaurants with 2-3 stars rating have more hours._ 
-  
- > ii. Do the two groups you chose to analyze have a different number of reviews? 
-  
-   _Yes, the restaurants with 4-5 stars rating have more reviews than the restaurants with 2-3 stars rating._ 
-  
- > iii. Are you able to infer anything from the location data provided between these two groups? Explain. 
-  
-   _No, every business is related to a different zip-code._ 
-  
- **CODE**: 
+     **CODE**: 
  ```SQL 
   
  SELECT b.NAME, 
@@ -401,14 +388,43 @@ SELECT reviews,
  | Pizzaiolo                              | Toronto | Restaurants | Saturday|10:00-4:00  | 34.0                | M5H 1X6     | 2-3 stars       | 
  | Five Guys                              | Phoenix | Restaurants | Saturday|10:00-22:00 | 63.0                | 85008       | 1 or less stars | 
   
-                  
+  
+ > i. Do the two groups you chose to analyze have a different distribution of hours? 
+  
+   I analyzed the data of Toronto Restaurants & Phoenix Restaurants. The distribution of hours was just a little bit different. The restaurants having 4-5 stars rating seems to have less hours where as the restaurants with 2-3 stars rating have more hours._
+  
+ > ii. Do the two groups you chose to analyze have a different number of reviews? 
+  
+   The two groups i cochose for analysis are restaurants in Phoenix and Toronto.
+- Phoenix Restaurants:
+  - Bootleggers Modern American Smokehouse: 431.0 reviews
+  - Cabin Fever: 26.0 reviews
+  - Charlie D's Catfish & Chicken: 7.0 reviews
+  - Gallagher's: 60.0 reviews
+  - McDonald's: 8.0 reviews
+  - Total reviews for Phoenix Restaurants: 431.0+26.0+7.0+60.0+8.0=532.0
+
+- Toronto Restaurants:
+ - Cabin Fever: 26.0 reviews
+ - Edulis: 89.0 reviews
+ - Sushi Osaka: 8.0 reviews
+ - 99 Cent Sushi: 5.0 reviews
+ - Big Smoke Burger: 47.0 reviews
+ - Pizzaiolo: 34.0 reviews
+ - Total reviews for Toronto Restaurants: 26.0+89.0+8.0+5.0+47.0+34.0=209.0
+
+### Conclusion:
+Phoenix Restaurants have a total review count of 532.0, while Toronto Restaurants have a total review count of 209.0.
+
+ > iii. Are you able to infer anything from the location data provided between these two groups? Explain.
+### Inference from Location Data:
+- The location data includes postal codes and city information.
+- Phoenix Restaurants have postal codes like 85028, 85034, 85024, and 85004.
+- Toronto Restaurants have postal codes like M6P 1A6, M5V, M9A 1C2, M5B 2E5, M4B 2L9, and M5H 1X6.
+- There is a clear distinction in postal codes between the two groups, indicating they are in different geographical locations.
+                 
  2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones that are still open and the ones that are closed?
-  
-  
-  
- i. Average review count of the closed businesses is less than the opened ones.\ 
- ii.  No other difference in this particular category. 
-  
+
  **CODE**: 
  ```SQL 
   
@@ -435,7 +451,6 @@ SELECT reviews,
  ORDER  BY is_open DESC  
  ``` 
 
-  
  **OUTPUT** 
  | name                                   | city    | category    | hours                | AVG(b.review_count) | postal_code | is_open | star_rating | 
  |----------------------------------------|---------|-------------|----------------------|---------------------|-------------|---------|-------------| 
@@ -450,18 +465,23 @@ SELECT reviews,
  | Sushi Osaka                            | Toronto | Restaurants | Saturday|11:00-23:00 | 8.0                 | M9A 1C2     | 1       | 4-5 stars   | 
  | 99 Cent Sushi                          | Toronto | Restaurants | Saturday|11:00-23:00 | 5.0                 | M5B 2E5     | 0       | 2-3 stars   | 
  | Charlie D's Catfish & Chicken          | Phoenix | Restaurants | Saturday|11:00-18:00 | 7.0                 | 85034       | 0       | 4-5 stars   | 
-  
+
+  ### Differences
+1. Restaurants that are closed usually have fewer reviews on average.
+2. Both open and closed restaurants have a combination of different star ratings.
+3. The operating hours differ between open and closed establishments.
+4. Additionally, there's a variety of postal codes for both open and closed restaurants.
   
  3. For this last part of your analysis, you are going to choose the type of analysis you want to conduct on the Yelp dataset and are going to prepare the data for analysis. 
 
-In this section, I conducted an analysis to ascertain the most popular business category.
+In this section, I analyzed to ascertain the most popular business category.
   
 I used star ratings, review counts, and the names of the businesses. This decision was made to discern the global popularity of various business categories. Within each category, I calculated the mean star rating, total reviews, and the overall number of businesses.
 To ensure statistical validity, I only focused on 25 categories with most businesses.  
 
 Here's the SQL code I wrote for the analysis:
 
-**CODE**
+## CODE
 ```SQL
 SELECT c.category,
        Round(Avg(b.stars), 2) AS avg_star_rating,
@@ -473,51 +493,24 @@ FROM   category c
 GROUP  BY c.category
 ORDER  BY business_count DESC
 ```
-
-
- **OUTPUT DATASET:**
+### OUTPUT DATASET:
   
- | category               | avg_star_rating | total_review_count | business_count | 
- |------------------------|-----------------|--------------------|----------------| 
- | Restaurants            | 3.45            | 3772               | 53             | 
- | Shopping               | 4.0             | 945                | 25             | 
- | Food                   | 3.73            | 1588               | 20             | 
- | Health & Medical       | 4.22            | 198                | 16             | 
- | Home Services          | 3.93            | 91                 | 15             | 
- | Beauty & Spas          | 3.79            | 116                | 12             | 
- | Nightlife              | 3.63            | 952                | 12             | 
- | Bars                   | 3.64            | 945                | 11             | 
- | Active Life            | 4.15            | 131                | 10             | 
- | Local Services         | 4.35            | 94                 | 10             | 
- | Automotive             | 4.5             | 198                | 9              | 
- | American (Traditional) | 3.81            | 1114               | 8              | 
- | Hotels & Travel        | 3.44            | 372                | 8              | 
- | Arts & Entertainment   | 4.0             | 388                | 7              | 
- | Burgers                | 2.86            | 293                | 7              | 
- | Fast Food              | 3.21            | 185                | 7              | 
- | Hair Salons            | 4.08            | 65                 | 6              | 
- | Sandwiches             | 3.92            | 715                | 6              | 
- | Doctors                | 4.2             | 55                 | 5              | 
- | Mexican                | 3.7             | 315                | 5              | 
- | Apartments             | 3.5             | 20                 | 4              | 
- | Auto Repair            | 4.63            | 122                | 4              | 
- | Bakeries               | 4.13            | 209                | 4              | 
- | Indian                 | 3.63            | 60                 | 4              | 
- | Parks                  | 3.88            | 80                 | 4              |
-  
+| category               | avg_star_rating | total_reviews | business_count | open_business |
+|------------------------|-----------------|---------------|----------------|---------------|
+| Restaurants            | 3.46            | 4504          | 71             | 71            |
+| Shopping               | 3.98            | 977           | 30             | 30            |
+| Food                   | 3.78            | 1781          | 23             | 23            |
+| Nightlife              | 3.48            | 1351          | 20             | 20            |
+| Bars                   | 3.5             | 1322          | 17             | 17            |
+| Health & Medical       | 4.09            | 203           | 17             | 17            |
+| Home Services          | 4.0             | 94            | 16             | 16            |
+| Beauty & Spas          | 3.88            | 119           | 13             | 13            |
+| Local Services         | 4.21            | 100           | 12             | 12            |
+| American (Traditional) | 3.82            | 1128          | 11             | 11            |
+
  ### Key Findings  
-         1. Restaurants have an average star rating of 3.45, with a substantial total of 3,772 reviews spread across 53 businesses.
-         2. Shopping businesses exhibit a higher average star rating of 4.0, based on 945 reviews from 25 businesses.
-         3. The Food category receives an average star rating of 3.73, derived from 1,588 reviews spanning 20 businesses.
-         4. Health and medical services showcase positive feedback, with an average star rating of 4.22 from 198 reviews across 16 businesses. 
-         5. Home Services has an average star rating of 3.93, derived from 91 reviews across 15 businesses. 
-         6. Beauty & Spas receives an average star rating of 3.79 based on 116 reviews from 12 businesses. 
-         7. Nightlife establishments receive an average star rating of 3.63, with a total of 952 reviews distributed among 12 businesses. 
-         8. Bars, with a slightly higher average star rating of 3.64, are represented by 945 reviews across 11 businesses. 
-         9. Active Life businesses demonstrate an average star rating of 4.15, based on 131 reviews from 10 businesses. 
-         10. Local Services has an exceptionally high average star rating of 4.35, with 94 reviews spread across 10 businesses. 
-
-
-
-
+1. **Restaurants** are the most common type of business, with a total of 71 in this category. This indicates that a large number of establishments fall into the restaurant category, making it a prevalent choice for entrepreneurs. Moreover, restaurants also receive a significant number of reviews, totaling 4504. This suggests that people who dine out are likely to share their experiences, making restaurants a popular and reviewed choice among customers.
+2. **Health & Medical** and **Home Services** have relatively high average star ratings  i.e., 4.09 and 4.0, respectively, even though there aren't a lot of businesses in these categories. This indicates a generally positive perception of businesses in these categories.
+3. **Bars and American (Traditional)** both hold average star ratings in the middle range. Despite this, they have a considerable number of businesses, pointing to a competitive environment in these categories.
+4. **Local Services** is at the top with an average star rating of 4.21, showing that businesses in this category usually have more satisfied customers.
 
