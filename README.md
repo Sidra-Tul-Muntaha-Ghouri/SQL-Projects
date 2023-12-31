@@ -351,7 +351,10 @@ SELECT reviews,
   
  ## Part 2: Inferences and Analysis 
   
- 1. Pick one city and category and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars and answer the following questions.
+** 1. Pick one city and category and group the businesses in that city or category by their overall star rating. Compare the businesses with 2-3 stars to the businesses with 4-5 stars and answer the following questions.**
+### Analysis Details:
+City: Phoenix
+Category: Restaurants
 
 ### CODE:
 
