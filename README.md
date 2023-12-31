@@ -264,13 +264,10 @@ In the second part, I did a comparative analysis of the businesses with 2-3 star
   
  8. Does posing more reviews correlate with more fans? 
   
- **ANSWER**: There is no correlation between reviews and fans. 
-  
- _Order by reviews count in descending_  _Order by fans in descending_ 
+ _Order by reviews count in descending_    | |    _Order by fans in descending_ 
 
- 
-| name      | fans | review_count |   | name      | fans | review_count |
-|-----------|------|--------------|   |-----------|------|--------------|
+ | name      | fans | review_count |   | name      | fans | review_count |
+|-----------|------|--------------|---|-----------|------|--------------|
 | Gerald    | 253  | 2000         |   | Amy       | 503  | 609          |
 | Sara      | 50   | 1629         |   | Mimi      | 497  | 968          |
 | Yuri      | 76   | 1339         |   | Harald    | 311  | 1153         |
@@ -297,67 +294,8 @@ In the second part, I did a comparative analysis of the businesses with 2-3 star
 | Crissy    | 25   | 676          |   | Yuri      | 76   | 1339         |
 | Lyn       | 45   | 675          |   | Nicole    | 73   | 161          |
 
-  
- | name      | fans | review_count | 
- |-----------|------|--------------| 
- | Gerald    |  253 |         2000 | 
- | Sara      |   50 |         1629 | 
- | Yuri      |   76 |         1339 | 
- | .Hon      |  101 |         1246 | 
- | William   |  126 |         1215 | 
- | Harald    |  311 |         1153 | 
- | eric      |   16 |         1116 | 
- | Roanna    |  104 |         1039 | 
- | Mimi      |  497 |          968 | 
- | Christine |  173 |          930 | 
- | Ed        |   38 |          904 | 
- | Nicole    |   43 |          864 | 
- | Fran      |  124 |          862 | 
- | Mark      |  115 |          861 | 
- | Christina |   85 |          842 | 
- | Dominic   |   37 |          836 | 
- | Lissa     |  120 |          834 | 
- | Lisa      |  159 |          813 | 
- | Alison    |   61 |          775 | 
- | Sui       |   78 |          754 | 
- | Tim       |   35 |          702 | 
- | L         |   10 |          696 | 
- | Angela    |  101 |          694 | 
- | Crissy    |   25 |          676 | 
- | Lyn       |   45 |          675 | 
-  
-  
- _Order by fans in descending_  
-  
- | name      | fans | review_count | 
- |-----------|------|--------------| 
- | Amy       |  503 |          609 | 
- | Mimi      |  497 |          968 | 
- | Harald    |  311 |         1153 | 
- | Gerald    |  253 |         2000 | 
- | Christine |  173 |          930 | 
- | Lisa      |  159 |          813 | 
- | Cat       |  133 |          377 | 
- | William   |  126 |         1215 | 
- | Fran      |  124 |          862 | 
- | Lissa     |  120 |          834 | 
- | Mark      |  115 |          861 | 
- | Tiffany   |  111 |          408 | 
- | bernice   |  105 |          255 | 
- | Roanna    |  104 |         1039 | 
- | Angela    |  101 |          694 | 
- | .Hon      |  101 |         1246 | 
- | Ben       |   96 |          307 | 
- | Linda     |   89 |          584 | 
- | Christina |   85 |          842 | 
- | Jessica   |   84 |          220 | 
- | Greg      |   81 |          408 | 
- | Nieves    |   80 |          178 | 
- | Sui       |   78 |          754 | 
- | Yuri      |   76 |         1339 | 
- | Nicole    |   73 |          161 | 
-  
- Based on the results above, we can conclude that fans and the number of reviews are not correlated. 
+ 
+ Based on the results above, i can say that fans and the number of reviews are not correlated.\Gerald, who has the most fans, only has 253 reviews. Yuri has only 76 fans, but has the 1339 reviews. 
   
  9. Are there more reviews with the word "love" or with the word "hate" in them? 
   
