@@ -28,14 +28,16 @@
 - **Dashed lines** connecting tables illustrate the relationships between them. For example, if the business table has a one-to-many relationship with other tables, this connection is depicted by dashed lines in the diagram. 
 ## Workflow
 
-The project is comprised of two parts:
-  1. Data profiling & Understanding
-  2. Inferences and Analysis.
+The analysis is structured into two main parts, each serving a distinct purpose in understanding and extracting valuable insights from the Yelp dataset.
+###  1. Data profiling & Understanding
+     
+In this initial phase, the focus is on unraveling the composition and scale of the Yelp dataset. A series of questions guide the exploration, ranging from profiling the data by finding the total number of records for each table to uncovering the distribution of star ratings across various cities. The intent is to lay the groundwork for a comprehensive understanding of the dataset's fundamental characteristics.
 
-In the first part, I  profiled the data and presented a low-level overview of the data For instance; the total number of records in each table, the null and the distinct values in the table, and the minimum, maximum & average values in the table. Also, the cities with the most reviews and the businesses with high star ratings etcetera.
+###  2. Inferences and Analysis.
+  
+Building upon the insights gained from dataset profiling, the second part delves into more nuanced analyses. Specific questions guide the examination of factors such as the differences between businesses with 2-3 stars and those with 4-5 stars, the distinctions between open and closed businesses, and the identification of the most popular business categories. Each analysis is designed to extract actionable insights, fostering a deeper understanding of Yelp's rich dataset.
 
-In the second part, I did a comparative analysis of the businesses with 2-3 star ratings to the businesses with 4-5 stars. I also inferred the similarities between the businesses that are open with the closed ones. I then analyzed it to ascertain the most popular business category.
-
+This structured workflow ensures a systematic approach, allowing for a holistic exploration of the dataset and the generation of meaningful inferences that can inform decision-making processes.
 
  ## Part 1: Dataset Profiling and Understanding 
   
@@ -511,8 +513,11 @@ ORDER  BY business_count DESC
 | American (Traditional) | 3.82            | 1128          | 11             | 11            |
 
  ### Key Findings  
-1. **Restaurants** are the most common type of business, with a total of 71 in this category. This indicates that a large number of establishments fall into the restaurant category, making it a prevalent choice for entrepreneurs. Moreover, restaurants also receive a significant number of reviews, totaling 4504. This suggests that people who dine out are likely to share their experiences, making restaurants a popular and reviewed choice among customers.
-2. **Health & Medical** and **Home Services** have relatively high average star ratings  i.e., 4.09 and 4.0, respectively, even though there aren't a lot of businesses in these categories. This indicates a generally positive perception of businesses in these categories.
-3. **Bars and American (Traditional)** both hold average star ratings in the middle range. Despite this, they have a considerable number of businesses, pointing to a competitive environment in these categories.
-4. **Local Services** is at the top with an average star rating of 4.21, showing that businesses in this category usually have more satisfied customers.
+1. **Restaurants**: Unsurprisingly, "Restaurants" emerge as the most common type of business, boasting 71 establishments. The sheer volume of businesses, coupled with a substantial 4504 reviews, signifies the prevalent choice of entrepreneurs and the high engagement level of Yelp users in the restaurant category.
+2. **Health & Medical** and **Home Services**: Although relatively fewer in number, "Health & Medical" and "Home Services" stand out with high average star ratings of 4.09 and 4.0, respectively. This suggests positive perceptions and satisfied customers within these categories.
+3. **Bars and American (Traditional)**: Categories like "Bars" and "American (Traditional)" present a competitive landscape with a moderate average star rating. Despite this, their considerable number of businesses indicates a vibrant market.
+4. **Local Services**: Topping the list with an impressive 4.21 average star rating, "Local Services" showcases businesses that consistently garner positive reviews, indicating a high level of customer satisfaction.
+
+### Wrap-Up
+Looking at the popular business types gives us a picture of what people enjoy and what's competitive. If you're thinking of starting a business, you might want to consider how restaurants dominate, the potential in Health and medical and Home Services, and the competitive nature of Bars and American (Traditional). The success of Local Services tells us that making customers happy is a big deal. Overall, this info helps businesses make smart choices and do well.
 
