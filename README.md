@@ -44,17 +44,17 @@ In the second part, I did a comparative analysis of the businesses with 2-3 star
   
  1. Profile the data by finding the total number of records for each of the tables. 
   
-    i. Attribute table = 10000\ 
-   ii. Business table = 10000\ 
-   iii. Category table = 10000\ 
-   iv. Checkin table = 10000\ 
-   v. elite_years table = 10000\ 
-   vi. friend table = 10000\ 
-   vii. hours table =10000\ 
-   viii. photo table =10000\  
-   ix. review table = 10000\ 
-   x. tip table = 10000\ 
-   xi. user table = 10000\ 
+  i. Attribute table = 10000\
+  ii. Business table = 10000\
+  iii. Category table = 10000\
+  iv. Checkin table = 10000\
+  v. elite_years table = 10000\
+  vi. friend table = 10000\
+  vii. hours table =10000\
+  viii. photo table =10000\
+  ix. review table = 10000\
+  x. tip table = 10000\
+  xi. user table = 10000\
   
  **CODE:**  
  ```SQL 
@@ -65,16 +65,16 @@ In the second part, I did a comparative analysis of the businesses with 2-3 star
   
  2. Find the total distinct records by either the foreign key or primary key for each table. If two foreign keys are listed in the table, please specify which foreign key. 
   
-     i. Business = 10000 (id)\ 
-     ii. Hours = 1562 (business_id)\ 
-     iii. Category = 2643 (business_id)\ 
-     iv. Attribute = 1115 (business_id)\ 
-     v. Review = 8090 (business_id)\ 
-     vi. Checkin = 493 (business_id)\ 
-     vii. Photo = 6493 (business_id)\ 
-     viii. Tip = 3979 (business_id)\ 
-     ix. User = 10000 (id)\ 
-     x. Friend = 11 (user_id)\ 
+     i. Business = 10000 (id)\
+     ii. Hours = 1562 (business_id)\
+     iii. Category = 2643 (business_id)\
+     iv. Attribute = 1115 (business_id)\
+     v. Review = 8090 (business_id)\
+     vi. Checkin = 493 (business_id)\
+     vii. Photo = 6493 (business_id)\
+     viii. Tip = 3979 (business_id)\
+     ix. User = 10000 (id)\
+     x. Friend = 11 (user_id)\
      xi. Elite_years = 2780 (user_id) 
   
  **CODE:** 
